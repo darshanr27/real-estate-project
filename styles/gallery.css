@@ -1,0 +1,26 @@
+body {
+  background-color: #f1faf5;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column: 5px;
+  grid-row: 5px;
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.gallery-item {
+  background-color: #082c2c;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.pic1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
