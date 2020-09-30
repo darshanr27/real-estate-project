@@ -1,11 +1,11 @@
-.container {
+.disclaimer-container {
   display: flex;
   justify-content: center;
-  height: 300px;
-  padding: 50px;
+  height: auto;
+  margin-bottom: 50px;
 }
 
-.container > div {
+.disclaimer-container > div {
   border: 1px solid #1e1b22;
   box-shadow: 10px 10px 1px #082c2c8a;
 }
@@ -19,6 +19,7 @@
 
 .card a {
   text-decoration: none;
+  font-weight: bold;
   color: #6ab992;
   font-style: italic;
 }
