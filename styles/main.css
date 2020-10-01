@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+.center {
+  margin: 0 auto;
+}
+
 /* Applying style to the header i.e., nav bar */
 .nav-head {
   background-color: #ffffff;
@@ -14,20 +18,63 @@ body {
   text-align: center;
 }
 
+.logo-and-hamburger-container {
+  margin-bottom: 50px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .logo {
   height: 90px;
   width: 120px;
 }
 
+.logo-container {
+  position: relative;
+}
+
 .logo-head {
   overflow: hidden;
-  padding-bottom: 10px;
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 4px;
-  position: relative;
-  bottom: 30px;
+  white-space: nowrap;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  position: absolute;
   color: #0c1829;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.closeNavIcon {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .nav-head {
+    height: 115px;
+  }
+
+  .logo-and-hamburger-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .hamburgerIcon {
+    display: block;
+    font-size: 1.5em;
+    position: relative;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #0c1829;
+  }
 }
 
 .nav-item {
@@ -35,6 +82,7 @@ body {
   text-align: center;
   position: relative;
   bottom: 30px;
+  z-index: 1;
 }
 
 .nav-item li {
@@ -59,6 +107,59 @@ body {
   text-decoration: none;
 }
 
+@media (max-width: 767px) {
+  nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(12, 24, 41, 0.98);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .nav-open {
+    width: 70%;
+  }
+
+  .nav-item {
+    position: relative;
+    top: 4em;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .nav-item li {
+    display: block;
+    padding: 5px;
+    transition: 0.3s;
+  }
+
+  .nav-item li:hover {
+    border-bottom: none;
+    color: #035858;
+  }
+
+  .closeNavIcon {
+    display: block;
+    font-size: 1.5em;
+    float: left;
+    position: relative;
+    top: 1.5em;
+    left: 1.5em;
+    cursor: pointer;
+    color: #0d4444;
+  }
+
+  .closeNavIcon:hover {
+    color: #035858;
+  }
+}
+
 /* Applying style to the main body content */
 .main-body {
   background-image: url(https://ak.picdn.net/shutterstock/videos/3614222/thumb/3.jpg) !important;
@@ -70,7 +171,6 @@ body {
 
 .main-body-section {
   padding-top: 250px;
-  padding-right: 500px;
   text-align: center;
 }
 
@@ -79,6 +179,17 @@ body {
   color: #082c2c;
   font-size: 50px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .main-body-section {
+    position: relative;
+    bottom: 90px;
+  }
+
+  .sub-head {
+    font-size: 40px;
+  }
 }
 
 .main-body-text {
@@ -124,15 +235,12 @@ body {
   background-color: #144d4d;
 }
 
-.footer-block {
+footer {
   background-color: #082c2c;
-  height: 300px;
 }
 
-.info-block {
-  display: flex;
-  justify-content: center;
-  padding-right: 100px;
+.footer-block {
+  min-height: 300px;
 }
 
 .info-block > div {
@@ -141,9 +249,6 @@ body {
   color: #ffffff;
   text-align: center;
   line-height: 25px;
-  margin: 10px;
-  padding-right: 100px;
-  padding-left: 80px;
   padding-top: 20px;
 }
 
