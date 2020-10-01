@@ -19,7 +19,7 @@ body {
   transition: 0.5s;
 }
 
-span {
+.term-condition span {
   font-family: sans-serif;
   font-size: 15px;
   color: #8286869c;
