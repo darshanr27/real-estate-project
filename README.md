@@ -19,11 +19,14 @@ The project ‘Vihar Valley’ is a real estate related website made using HTML 
 - There will be a gallery page where all the property photos are showcased.
 - The membership page will give the information about the membership plans and the corresponding benefits.
 - In the contact us page people can send feedback or queries if any.
+- Made responsive design for mobile device.
 
 ### TOOLS AND TECHNOLOGY
 - HTML
 - CSS
+- JavaScript
 - VS code
 - Google Fonts
+- Bootstrap
 - Github
 - Netlify
